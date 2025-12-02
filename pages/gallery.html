@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TechSkill NGO - Empowering Students with Technical Education and Cybersecurity Awareness">
+    <meta name="keywords" content="TechSkill NGO, Technical Education, Cybersecurity, Digital Safety, Student Empowerment, Coding Skills, Workshops">
+    <meta name="author" content="Aman Varma">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - TechSkill NGO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Side Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="logo-text">TechSkill NGO</span>
+            </div>
+            <button class="close-btn" id="closeBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="courses.html" class="nav-link">
+                    <i class="fas fa-book-open"></i>
+                    <span>Courses</span>
+                </a>
+            </li>
+            <li>
+                <a href="faculties.html" class="nav-link">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Faculties</span>
+                </a>
+            </li>
+            <li>
+                <a href="gallery.html" class="nav-link active">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="events.html" class="nav-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+            <li>
+                <a href="donors.html" class="nav-link">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Donors</span>
+                </a>
+            </li>
+            <li>
+                <a href="alumni.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Alumni</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Top Header -->
+        <header class="top-header">
+            <button class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-actions">
+                <button class="btn btn-primary">Donate Now</button>
+            </div>
+        </header>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Our Gallery</h1>
+                <p class="page-description">Capturing moments from workshops, events, and success stories</p>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Gallery</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Gallery Filter Section -->
+        <section class="gallery-filter-section">
+            <div class="container">
+                <div class="filter-header">
+                    <h3>Explore Our Memories</h3>
+                    <p>Filter by event type or year</p>
+                </div>
+                <div class="gallery-filter-controls">
+                    <div class="filter-group">
+                        <label for="galleryCategoryFilter">Category</label>
+                        <select id="galleryCategoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="workshop">Workshops</option>
+                            <option value="seminar">Seminars</option>
+                            <option value="cybersecurity">Cybersecurity Events</option>
+                            <option value="girls-safety">Girls Safety Programs</option>
+                            <option value="award">Award Ceremonies</option>
+                            <option value="training">Training Sessions</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="galleryYearFilter">Year</label>
+                        <select id="galleryYearFilter" class="filter-select">
+                            <option value="all">All Years</option>
+                            <option value="2024">2024</option>
+                            <option value="2023">2023</option>
+                            <option value="2022">2022</option>
+                            <option value="2021">2021</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-outline" id="resetGalleryFilters">
+                        <i class="fas fa-redo"></i>
+                        Reset Filters
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid Section -->
+        <section class="gallery-section">
+            <div class="container">
+                <div class="gallery-grid" id="galleryGrid">
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-item" data-category="workshop" data-year="2024">
+                        <div class="gallery-image">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="gallery-content">
+                            <h3 class="gallery-title">Python Programming Workshop</h3>
+                            <p class="gallery-date">
+                                <i class="far fa-calendar"></i>
+                                March 15, 2024
+                            </p>
+                            <p class="gallery-description">
+                                Introductory Python workshop for school students covering basic programming concepts.
+                            </p>
+                            <div class="gallery-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    45 Participants
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Delhi Public School
+                                </span>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="btn btn-outline btn-block view-gallery-btn">
+                                <i class="fas fa-eye"></i>
+                                View Photos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 2 -->
+                    <div class="gallery-item" data-category="cybersecurity" data-year="2024">
+                        <div class="gallery-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="gallery-content">
+                            <h3 class="gallery-title">Cybersecurity Awareness Camp</h3>
+                            <p class="gallery-date">
+                                <i class="far fa-calendar"></i>
+                                February 28, 2024
+                            </p>
+                            <p class="gallery-description">
+                                Comprehensive cybersecurity training focusing on online safety and fraud prevention.
+                            </p>
+                            <div class="gallery-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    120 Participants
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Tech Innovation Center
+                                </span>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="btn btn-outline btn-block view-gallery-btn">
+                                <i class="fas fa-eye"></i>
+                                View Photos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="gallery-item" data-category="girls-safety" data-year="2024">
+                        <div class="gallery-image">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="gallery-content">
+                            <h3 class="gallery-title">Girls Online Safety Workshop</h3>
+                            <p class="gallery-date">
+                                <i class="far fa-calendar"></i>
+                                January 20, 2024
+                            </p>
+                            <p class="gallery-description">
+                                Specialized workshop focusing on digital safety and privacy for female students.
+                            </p>
+                            <div class="gallery-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    85 Participants
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Women's College
+                                </span>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="btn btn-outline btn-block view-gallery-btn">
+                                <i class="fas fa-eye"></i>
+                                View Photos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 -->
+                    <div class="gallery-item" data-category="seminar" data-year="2023">
+                        <div class="gallery-image">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="gallery-content">
+                            <h3 class="gallery-title">Annual Tech Education Summit</h3>
+                            <p class="gallery-date">
+                                <i class="far fa-calendar"></i>
+                                December 10, 2023
+                            </p>
+                            <p class="gallery-description">
+                                Gathering of educators and students to discuss future of technical education.
+                            </p>
+                            <div class="gallery-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    200+ Participants
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Convention Center
+                                </span>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="btn btn-outline btn-block view-gallery-btn">
+                                <i class="fas fa-eye"></i>
+                                View Photos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5 -->
+                    <div class="gallery-item" data-category="training" data-year="2023">
+                        <div class="gallery-image">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="gallery-content">
+                            <h3 class="gallery-title">Teacher Training Program</h3>
+                            <p class="gallery-date">
+                                <i class="far fa-calendar"></i>
+                                November 5, 2023
+                            </p>
+                            <p class="gallery-description">
+                                Training session for school teachers on integrating technology in classrooms.
+                            </p>
+                            <div class="gallery-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    60 Teachers
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Education Department
+                                </span>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="btn btn-outline btn-block view-gallery-btn">
+                                <i class="fas fa-eye"></i>
+                                View Photos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 6 -->
+                    <div class="gallery-item" data-category="award" data-year="2023">
+                        <div class="gallery-image">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="gallery-content">
+                            <h3 class="gallery-title">Student Excellence Awards</h3>
+                            <p class="gallery-date">
+                                <i class="far fa-calendar"></i>
+                                October 15, 2023
+                            </p>
+                            <p class="gallery-description">
+                                Recognition ceremony for outstanding students in technical skill development.
+                            </p>
+                            <div class="gallery-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    35 Awardees
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Grand Hotel
+                                </span>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="btn btn-outline btn-block view-gallery-btn">
+                                <i class="fas fa-eye"></i>
+                                View Photos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 7 -->
+                    <div class="gallery-item" data-category="workshop" data-year="2022">
+                        <div class="gallery-image">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <div class="gallery-content">
+                            <h3 class="gallery-title">Mobile App Development</h3>
+                            <p class="gallery-date">
+                                <i class="far fa-calendar"></i>
+                                September 8, 2022
+                            </p>
+                            <p class="gallery-description">
+                                Hands-on workshop teaching mobile app development using modern frameworks.
+                            </p>
+                            <div class="gallery-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    75 Participants
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Tech Campus
+                                </span>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="btn btn-outline btn-block view-gallery-btn">
+                                <i class="fas fa-eye"></i>
+                                View Photos
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 8 -->
+                    <div class="gallery-item" data-category="cybersecurity" data-year="2022">
+                        <div class="gallery-image">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="gallery-content">
+                            <h3 class="gallery-title">Ethical Hacking Workshop</h3>
+                            <p class="gallery-date">
+                                <i class="far fa-calendar"></i>
+                                August 12, 2022
+                            </p>
+                            <p class="gallery-description">
+                                Advanced workshop on ethical hacking techniques and cybersecurity principles.
+                            </p>
+                            <div class="gallery-meta">
+                                <span class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    50 Participants
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Engineering College
+                                </span>
+                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="btn btn-outline btn-block view-gallery-btn">
+                                <i class="                            </div>
+                        </div>
+                        <div class="gallery-actions">
+                            <button class="btn btn-outline btn-block view-gallery-btn">
+                                <i class="fas fa-eye"></i>
+                                View Photos
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-results" id="noGalleryResults" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No Gallery Items Found</h3>
+                        <p>Try adjusting your filters to see more gallery items.</p>
+                        <button class="btn btn-primary" id="resetGalleryFiltersBtn">Reset All Filters</button>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section">
+                    <button class="btn btn-outline" id="loadMoreBtn">
+                        <i class="fas fa-plus"></i>
+                        Load More Events
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Gallery Section -->
+        <section class="video-gallery-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Video Gallery</h2>
+                    <p>Watch highlights from our events and success stories</p>
+                </div>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-overlay">
+                                <h4>Cybersecurity Workshop Highlights</h4>
+                                <p>5 min watch</p>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Cybersecurity Workshop 2024</h4>
+                            <p>Highlights from our recent cybersecurity awareness workshop</p>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-overlay">
+                                <h4>Student Success Stories</h4>
+                                <p>8 min watch</p>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Transforming Lives Through Tech</h4>
+                            <p>Inspiring stories from our students</p>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="video-thumbnail">
+                            <i class="fas fa-play-circle"></i>
+                            <div class="video-overlay">
+                                <h4>Girls Safety Program</h4>
+                                <p>6 min watch</p>
+                            </div>
+                        </div>
+                        <div class="video-info">
+                            <h4>Empowering Girls Online</h4>
+                            <p>Special program for girls' digital safety</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="download-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Resources & Downloads</h2>
+                    <p>Access workshop materials and event resources</p>
+                </div>
+                <div class="download-grid">
+                    <div class="download-item">
+                        <div class="download-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <div class="download-content">
+                            <h4>Cybersecurity Handbook</h4>
+                            <p>Complete guide to online safety and fraud prevention</p>
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fas fa-download"></i>
+                                Download PDF
+                            </button>
+                        </div>
+                    </div>
+                    <div class="download-item">
+                        <div class="download-icon">
+                            <i class="fas fa-file-powerpoint"></i>
+                        </div>
+                        <div class="download-content">
+                            <h4>Python Workshop Slides</h4>
+                            <p>Presentation slides from basic Python programming workshop</p>
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fas fa-download"></i>
+                                Download PPT
+                            </button>
+                        </div>
+                    </div>
+                    <div class="download-item">
+                        <div class="download-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="download-content">
+                            <h4>Girls Safety Guide</h4>
+                            <p>Comprehensive guide to online safety for female students</p>
+                            <button class="btn btn-outline btn-sm">
+                                <i class="fas fa-download"></i>
+                                Download Guide
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechSkill NGO</h3>
+                    <p>Empowering students with technical education and digital safety awareness.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Education City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@techskillngo.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechSkill NGO. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/gallery.js"></script>
+</body>
+</html>
+                                

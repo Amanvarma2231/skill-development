@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TechSkill NGO - Empowering Students with Technical Education and Cybersecurity Awareness">
+    <meta name="keywords" content="TechSkill NGO, Technical Education, Cybersecurity, Digital Safety, Student Empowerment, Coding Skills, Workshops">
+    <meta name="author" content="Aman Varma">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Faculties - TechSkill NGO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Side Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="logo-text">TechSkill NGO</span>
+            </div>
+            <button class="close-btn" id="closeBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="courses.html" class="nav-link">
+                    <i class="fas fa-book-open"></i>
+                    <span>Courses</span>
+                </a>
+            </li>
+            <li>
+                <a href="faculties.html" class="nav-link active">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Faculties</span>
+                </a>
+            </li>
+            <li>
+                <a href="gallery.html" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="events.html" class="nav-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+            <li>
+                <a href="donors.html" class="nav-link">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Donors</span>
+                </a>
+            </li>
+            <li>
+                <a href="alumni.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Alumni</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Top Header -->
+        <header class="top-header">
+            <button class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-actions">
+                <button class="btn btn-primary">Donate Now</button>
+            </div>
+        </header>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Our Expert Faculties</h1>
+                <p class="page-description">Learn from industry professionals and experienced educators</p>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Faculties</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Faculty Filter Section -->
+        <section class="faculty-filter-section">
+            <div class="container">
+                <div class="filter-header">
+                    <h3>Find the Right Mentor</h3>
+                    <p>Filter by specialization, experience, or availability</p>
+                </div>
+                <div class="faculty-filter-controls">
+                    <div class="filter-group">
+                        <label for="specializationFilter">Specialization</label>
+                        <select id="specializationFilter" class="filter-select">
+                            <option value="all">All Specializations</option>
+                            <option value="cybersecurity">Cybersecurity</option>
+                            <option value="programming">Programming</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="data-science">Data Science</option>
+                            <option value="networking">Networking</option>
+                            <option value="safety">Online Safety</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="experienceFilter">Experience</label>
+                        <select id="experienceFilter" class="filter-select">
+                            <option value="all">Any Experience</option>
+                            <option value="1-3">1-3 Years</option>
+                            <option value="3-5">3-5 Years</option>
+                            <option value="5-10">5-10 Years</option>
+                            <option value="10+">10+ Years</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="availabilityFilter">Availability</label>
+                        <select id="availabilityFilter" class="filter-select">
+                            <option value="all">All Status</option>
+                            <option value="available">Available</option>
+                            <option value="limited">Limited</option>
+                            <option value="busy">Currently Busy</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-outline" id="resetFacultyFilters">
+                        <i class="fas fa-redo"></i>
+                        Reset Filters
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Faculty Grid Section -->
+        <section class="faculty-section">
+            <div class="container">
+                <div class="faculty-grid" id="facultyGrid">
+                    <!-- Faculty Member 1 -->
+                    <div class="faculty-card" data-specialization="cybersecurity" data-experience="10+" data-availability="available">
+                        <div class="faculty-status available">Available</div>
+                        <div class="faculty-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="faculty-content">
+                            <h3 class="faculty-name">Dr. Amit Kumar</h3>
+                            <p class="faculty-title">Cybersecurity Expert</p>
+                            <p class="faculty-experience">
+                                <i class="fas fa-briefcase"></i>
+                                12+ Years Experience
+                            </p>
+                            <div class="faculty-specializations">
+                                <span class="specialization-tag">Network Security</span>
+                                <span class="specialization-tag">Ethical Hacking</span>
+                                <span class="specialization-tag">Digital Forensics</span>
+                            </div>
+                            <p class="faculty-bio">
+                                Former security analyst at leading tech companies. Specialized in penetration testing and security audits.
+                            </p>
+                            <div class="faculty-stats">
+                                <div class="stat">
+                                    <strong>1500+</strong>
+                                    <span>Students</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>4.9</strong>
+                                    <span>Rating</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>98%</strong>
+                                    <span>Success</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-actions">
+                            <button class="btn btn-primary btn-block">View Profile</button>
+                            <button class="btn btn-outline btn-block">Contact</button>
+                        </div>
+                    </div>
+
+                    <!-- Faculty Member 2 -->
+                    <div class="faculty-card" data-specialization="programming" data-experience="5-10" data-availability="available">
+                        <div class="faculty-status available">Available</div>
+                        <div class="faculty-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="faculty-content">
+                            <h3 class="faculty-name">Prof. Sneha Sharma</h3>
+                            <p class="faculty-title">Programming Instructor</p>
+                            <p class="faculty-experience">
+                                <i class="fas fa-briefcase"></i>
+                                8 Years Experience
+                            </p>
+                            <div class="faculty-specializations">
+                                <span class="specialization-tag">Java</span>
+                                <span class="specialization-tag">Python</span>
+                                <span class="specialization-tag">Algorithms</span>
+                            </div>
+                            <p class="faculty-bio">
+                                Computer Science professor with passion for teaching programming fundamentals and advanced concepts.
+                            </p>
+                            <div class="faculty-stats">
+                                <div class="stat">
+                                    <strong>2000+</strong>
+                                    <span>Students</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>4.8</strong>
+                                    <span>Rating</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>95%</strong>
+                                    <span>Success</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-actions">
+                            <button class="btn btn-primary btn-block">View Profile</button>
+                            <button class="btn btn-outline btn-block">Contact</button>
+                        </div>
+                    </div>
+
+                    <!-- Faculty Member 3 -->
+                    <div class="faculty-card" data-specialization="web-development" data-experience="3-5" data-availability="limited">
+                        <div class="faculty-status limited">Limited</div>
+                        <div class="faculty-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="faculty-content">
+                            <h3 class="faculty-name">Rahul Mehta</h3>
+                            <p class="faculty-title">Full Stack Developer</p>
+                            <p class="faculty-experience">
+                                <i class="fas fa-briefcase"></i>
+                                4 Years Experience
+                            </p>
+                            <div class="faculty-specializations">
+                                <span class="specialization-tag">React</span>
+                                <span class="specialization-tag">Node.js</span>
+                                <span class="specialization-tag">MongoDB</span>
+                            </div>
+                            <p class="faculty-bio">
+                                Industry professional teaching modern web development stack and best practices for real-world projects.
+                            </p>
+                            <div class="faculty-stats">
+                                <div class="stat">
+                                    <strong>800+</strong>
+                                    <span>Students</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>4.7</strong>
+                                    <span>Rating</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>92%</strong>
+                                    <span>Success</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-actions">
+                            <button class="btn btn-primary btn-block">View Profile</button>
+                            <button class="btn btn-outline btn-block">Contact</button>
+                        </div>
+                    </div>
+
+                    <!-- Faculty Member 4 -->
+                    <div class="faculty-card" data-specialization="safety" data-experience="5-10" data-availability="available">
+                        <div class="faculty-status available">Available</div>
+                        <div class="faculty-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="faculty-content">
+                            <h3 class="faculty-name">Anita Deshpande</h3>
+                            <p class="faculty-title">Online Safety Expert</p>
+                            <p class="faculty-experience">
+                                <i class="fas fa-briefcase"></i>
+                                7 Years Experience
+                            </p>
+                            <div class="faculty-specializations">
+                                <span class="specialization-tag">Cyber Safety</span>
+                                <span class="specialization-tag">Privacy</span>
+                                <span class="specialization-tag">Girls Safety</span>
+                            </div>
+                            <p class="faculty-bio">
+                                Dedicated to educating students about online safety, privacy protection, and handling cyber threats.
+                            </p>
+                            <div class="faculty-stats">
+                                <div class="stat">
+                                    <strong>1200+</strong>
+                                    <span>Students</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>4.9</strong>
+                                    <span>Rating</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>96%</strong>
+                                    <span>Success</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-actions">
+                            <button class="btn btn-primary btn-block">View Profile</button>
+                            <button class="btn btn-outline btn-block">Contact</button>
+                        </div>
+                    </div>
+
+                    <!-- Faculty Member 5 -->
+                    <div class="faculty-card" data-specialization="data-science" data-experience="10+" data-availability="busy">
+                        <div class="faculty-status busy">Busy</div>
+                        <div class="faculty-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="faculty-content">
+                            <h3 class="faculty-name">Dr. Sanjay Patel</h3>
+                            <p class="faculty-title">Data Science Specialist</p>
+                            <p class="faculty-experience">
+                                <i class="fas fa-briefcase"></i>
+                                15+ Years Experience
+                            </p>
+                            <div class="faculty-specializations">
+                                <span class="specialization-tag">Machine Learning</span>
+                                <span class="specialization-tag">Python</span>
+                                <span class="specialization-tag">Statistics</span>
+                            </div>
+                            <p class="faculty-bio">
+                                PhD in Computer Science with extensive research experience in machine learning and data analytics.
+                            </p>
+                            <div class="faculty-stats">
+                                <div class="stat">
+                                    <strong>1800+</strong>
+                                    <span>Students</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>4.8</strong>
+                                    <span>Rating</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>94%</strong>
+                                    <span>Success</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-actions">
+                            <button class="btn btn-primary btn-block">View Profile</button>
+                            <button class="btn btn-outline btn-block">Contact</button>
+                        </div>
+                    </div>
+
+                    <!-- Faculty Member 6 -->
+                    <div class="faculty-card" data-specialization="networking" data-experience="5-10" data-availability="available">
+                        <div class="faculty-status available">Available</div>
+                        <div class="faculty-image">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="faculty-content">
+                            <h3 class="faculty-name">Vikram Singh</h3>
+                            <p class="faculty-title">Networking Expert</p>
+                            <p class="faculty-experience">
+                                <i class="fas fa-briefcase"></i>
+                                9 Years Experience
+                            </p>
+                            <div class="faculty-specializations">
+                                <span class="specialization-tag">CCNA</span>
+                                <span class="specialization-tag">Network Security</span>
+                                <span class="specialization-tag">Cloud</span>
+                            </div>
+                            <p class="faculty-bio">
+                                Certified networking professional with expertise in enterprise network design and security implementation.
+                            </p>
+                            <div class="faculty-stats">
+                                <div class="stat">
+                                    <strong>1100+</strong>
+                                    <span>Students</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>4.7</strong>
+                                    <span>Rating</span>
+                                </div>
+                                <div class="stat">
+                                    <strong>93%</strong>
+                                    <span>Success</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="faculty-actions">
+                            <button class="btn btn-primary btn-block">View Profile</button>
+                            <button class="btn btn-outline btn-block">Contact</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-results" id="noFacultyResults" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No Faculty Members Found</h3>
+                        <p>Try adjusting your filters to see more faculty members.</p>
+                        <button class="btn btn-primary" id="resetFacultyFiltersBtn">Reset All Filters</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="faculty-stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="25">0</h3>
+                        <p class="stat-label">Expert Faculties</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="5000">0</h3>
+                        <p class="stat-label">Students Mentored</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="15">0</h3>
+                        <p class="stat-label">Years Experience</p>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h3 class="stat-number" data-count="4.8">0</h3>
+                        <p class="stat-label">Average Rating</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="faculty-cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Join Our Faculty Team</h2>
+                    <p>Are you passionate about teaching and technology? Join our mission to empower students with technical skills.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary btn-large">Apply Now</button>
+                        <button class="btn btn-secondary btn-large">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechSkill NGO</h3>
+                    <p>Empowering students with technical education and digital safety awareness.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="faculties.html">Faculties</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Education City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@techskillngo.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechSkill NGO. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/faculties.js"></script>
+    
+</body>
+</html>

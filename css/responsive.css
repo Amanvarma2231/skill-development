@@ -1,0 +1,1450 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .hero-stats {
+        gap: 40px;
+    }
+    
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .section-header h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-large {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .tools-grid,
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 16px;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        gap: 30px;
+    }
+    
+    .tools-section,
+    .features-section {
+        padding: 60px 16px;
+    }
+    
+    .tool-card,
+    .feature-card {
+        padding: 30px 20px;
+    }
+    
+    .top-header {
+        padding: 12px 16px;
+    }
+    
+    .sidebar {
+        width: 100%;
+    }
+    
+    .main-content.shifted {
+        margin-left: 0;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1200px) {
+    .hero-content {
+        max-width: 1000px;
+    }
+    
+    .tools-grid,
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Tablet specific styles */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tools-grid,
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .sidebar,
+    .top-header,
+    .hero-buttons,
+    .footer {
+        display: none;
+    }
+    
+    .main-content {
+        margin-left: 0 !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+/* Home page code end */
+
+/* About Page Responsive Styles */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+    
+    .mv-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .mv-card {
+        padding: 40px 30px;
+    }
+    
+    .timeline::before {
+        left: 30px;
+    }
+    
+    .timeline-item {
+        flex-direction: row !important;
+        margin-bottom: 40px;
+    }
+    
+    .timeline-year {
+        flex: 0 0 80px;
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+    
+    .timeline-content {
+        margin-left: 20px;
+        margin-right: 0;
+        border-left: 4px solid var(--secondary-color) !important;
+        border-right: none !important;
+    }
+    
+    .trust-grid,
+    .values-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .partners-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-header {
+        padding: 60px 0 40px;
+    }
+    
+    .page-title {
+        font-size: 1.8rem;
+    }
+    
+    .mv-card {
+        padding: 30px 20px;
+    }
+    
+    .timeline-content {
+        padding: 20px;
+    }
+    
+    .trust-card,
+    .value-card {
+        padding: 30px 20px;
+    }
+    
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet specific styles for About page */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .mv-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+    
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* about page code end */
+
+/* Course Page Responsive Styles */
+
+/* Courses Page Responsive Styles */
+@media (max-width: 768px) {
+    .filter-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .filter-group {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .course-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-section {
+        padding: 40px 0;
+    }
+    
+    .filter-header h3 {
+        font-size: 1.6rem;
+    }
+    
+    .courses-section {
+        padding: 60px 0;
+    }
+    
+    .course-content {
+        padding: 20px;
+    }
+    
+    .course-actions {
+        padding: 0 20px 20px;
+    }
+    
+    .course-meta {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .categories-section,
+    .testimonials-section,
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .category-card {
+        padding: 30px 20px;
+    }
+    
+    .testimonial-card {
+        padding: 20px;
+    }
+    
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet specific styles for Courses page */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .courses-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Faculties Page Responsive Styles */
+
+/* Faculties Page Responsive Styles */
+@media (max-width: 768px) {
+    .faculty-filter-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .filter-group {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .faculty-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .faculty-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .faculty-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .faculty-cta-section .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .faculty-cta-section .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .faculty-filter-section {
+        padding: 40px 0;
+    }
+    
+    .filter-header h3 {
+        font-size: 1.6rem;
+    }
+    
+    .faculty-section {
+        padding: 60px 0;
+    }
+    
+    .faculty-content {
+        padding: 20px;
+    }
+    
+    .faculty-actions {
+        padding: 0 20px 20px;
+    }
+    
+    .faculty-stats {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .faculty-stats-section,
+    .faculty-cta-section {
+        padding: 60px 0;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: 30px 20px;
+    }
+    
+    .faculty-cta-section .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .faculty-cta-section .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet specific styles for Faculties page */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .faculty-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Gallery Page Responsive Styles */
+/* Gallery Page Responsive Styles */
+@media (max-width: 768px) {
+    .gallery-filter-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .filter-group {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .gallery-item {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .download-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .download-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-filter-section {
+        padding: 40px 0;
+    }
+    
+    .filter-header h3 {
+        font-size: 1.6rem;
+    }
+    
+    .gallery-section {
+        padding: 60px 0;
+    }
+    
+    .gallery-content {
+        padding: 20px;
+    }
+    
+    .gallery-actions {
+        padding: 0 20px 20px;
+    }
+    
+    .gallery-image {
+        height: 150px;
+    }
+    
+    .gallery-image i {
+        font-size: 3rem;
+    }
+    
+    .video-gallery-section,
+    .download-section {
+        padding: 60px 0;
+    }
+    
+    .video-thumbnail {
+        height: 150px;
+    }
+    
+    .video-thumbnail i {
+        font-size: 3rem;
+    }
+    
+    .download-item {
+        padding: 20px;
+    }
+}
+
+/* Tablet specific styles for Gallery page */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .download-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Events Page Responsive Styles */
+@media (max-width: 768px) {
+    .events-tabs {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .events-filter-controls {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .filter-group {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .filter-select {
+        width: 100%;
+    }
+    
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .event-card {
+        flex-direction: column;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .event-date {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding: 15px;
+    }
+    
+    .date-day {
+        font-size: 1.5rem;
+    }
+    
+    .calendar-grid {
+        grid-template-columns: repeat(7, 1fr);
+        font-size: 0.8rem;
+    }
+    
+    .calendar-day {
+        padding: 8px 4px;
+        min-height: 60px;
+    }
+    
+    .day-number {
+        font-size: 0.9rem;
+    }
+    
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .highlight-card {
+        padding: 30px 20px;
+    }
+    
+    .events-cta-section .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .events-cta-section .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .events-navigation {
+        padding: 30px 0;
+    }
+    
+    .events-filter-section {
+        padding: 40px 0;
+    }
+    
+    .filter-header h3 {
+        font-size: 1.6rem;
+    }
+    
+    .events-section {
+        padding: 60px 0;
+    }
+    
+    .event-content {
+        padding: 20px;
+    }
+    
+    .event-actions {
+        padding: 0 20px 20px;
+    }
+    
+    .calendar-section,
+    .highlights-section,
+    .events-cta-section {
+        padding: 60px 0;
+    }
+    
+    .calendar-header {
+        padding: 16px;
+    }
+    
+    .calendar-day {
+        min-height: 50px;
+        padding: 6px 2px;
+    }
+    
+    .events-cta-section .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .events-cta-section .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet specific styles for Events page */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Donors Page Specific Styles */
+
+/* Funding Progress Section */
+.funding-section {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+.funding-progress {
+    background: var(--white);
+    padding: 50px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.progress-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.progress-stat {
+    text-align: center;
+}
+
+.progress-stat .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 8px;
+}
+
+.progress-stat .stat-label {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 1rem;
+}
+
+.progress-bar-container {
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    height: 20px;
+    background-color: var(--gray-light);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--secondary-color), #2ECC71);
+    border-radius: 10px;
+    transition: width 2s ease-in-out;
+}
+
+.progress-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.impact-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.impact-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.impact-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.impact-item i {
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.impact-content h4 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.impact-content p {
+    color: var(--text-color);
+    opacity: 0.8;
+    font-size: 0.9rem;
+}
+
+/* Top Donors Section */
+.top-donors-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.donors-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    padding: 4px;
+    margin-bottom: 40px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.donor-tab-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.donor-tab-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.donor-tab-btn:hover:not(.active) {
+    background: var(--gray-light);
+}
+
+.donors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.donor-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.donor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.donor-card.platinum {
+    border-color: #E5E4E2;
+}
+
+.donor-card.gold {
+    border-color: #FFD700;
+}
+
+.donor-card.silver {
+    border-color: #C0C0C0;
+}
+
+.donor-card.bronze {
+    border-color: #CD7F32;
+}
+
+.donor-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.donor-card.platinum .donor-badge {
+    background-color: #E5E4E2;
+    color: var(--primary-color);
+}
+
+.donor-card.gold .donor-badge {
+    background-color: #FFD700;
+    color: var(--primary-color);
+}
+
+.donor-card.silver .donor-badge {
+    background-color: #C0C0C0;
+    color: var(--primary-color);
+}
+
+.donor-card.bronze .donor-badge {
+    background-color: #CD7F32;
+    color: var(--white);
+}
+
+.donor-image {
+    height: 120px;
+    background: linear-gradient(135deg, var(--primary-color), #34495E);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+}
+
+.donor-image i {
+    font-size: 3rem;
+}
+
+.donor-content {
+    padding: 24px;
+}
+
+.donor-name {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.donor-contribution {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.donor-role {
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+}
+
+.donor-quote {
+    font-style: italic;
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    padding-left: 16px;
+    border-left: 3px solid var(--secondary-color);
+}
+
+.donor-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.donor-stat {
+    text-align: center;
+    padding: 12px;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+}
+
+.donor-stat strong {
+    display: block;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    margin-bottom: 4px;
+}
+
+.donor-stat span {
+    font-size: 0.8rem;
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Utilization Section */
+.utilization-section {
+    padding: 80px 0;
+    background-color: var(--background-color);
+}
+
+.utilization-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.chart-container {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.chart-legend {
+    margin-top: 20px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.utilization-details {
+    background: var(--white);
+    padding: 40px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.utilization-details h3 {
+    color: var(--primary-color);
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+}
+
+.utilization-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.utilization-item {
+    padding: 20px;
+    background: var(--background-color);
+    border-radius: var(--border-radius);
+    border-left: 4px solid var(--secondary-color);
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.item-header h4 {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.item-percentage {
+    background: var(--secondary-color);
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.utilization-item p {
+    color: var(--text-color);
+    opacity: 0.8;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+}
+
+.item-stats {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.item-stats span {
+    background: var(--white);
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+/* Donors Page Responsive Styles */
+@media (max-width: 768px) {
+    .funding-progress {
+        padding: 30px 20px;
+    }
+    
+    .progress-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .impact-stats {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .donors-tabs {
+        flex-direction: column;
+        gap: 4px;
+    }
+    
+    .donors-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .utilization-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .tiers-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .transparency-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .transparency-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .donors-cta-section .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .donors-cta-section .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .funding-section {
+        padding: 60px 0;
+    }
+    
+    .progress-stat .stat-number {
+        font-size: 2rem;
+    }
+    
+    .top-donors-section,
+    .utilization-section,
+    .tiers-section,
+    .transparency-section {
+        padding: 60px 0;
+    }
+    
+    .donor-content {
+        padding: 20px;
+    }
+    
+    .utilization-details {
+        padding: 30px 20px;
+    }
+    
+    .tier-header {
+        padding: 20px;
+    }
+    
+    .tier-benefits {
+        padding: 20px;
+    }
+    
+    .tier-actions {
+        padding: 0 20px 20px;
+    }
+    
+    .transparency-item {
+        padding: 30px 20px;
+    }
+    
+    .donors-cta-section .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .donors-cta-section .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet specific styles for Donors page */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .donors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tiers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .transparency-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* Alumni Page Responsive Styles */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .stories-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .story-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .network-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .network-cta {
+        padding: 30px 20px;
+    }
+    
+    .network-cta .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mentorship-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .testimonial-content {
+        padding: 30px 20px;
+    }
+    
+    .testimonial-author {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .outcomes-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .companies-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    
+    .alumni-cta-section .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .alumni-cta-section .cta-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .alumni-stats-section {
+        padding: 60px 0;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-card {
+        padding: 30px 20px;
+    }
+    
+    .success-stories-section,
+    .network-section,
+    .mentorship-section,
+    .alumni-testimonials-section,
+    .career-outcomes-section {
+        padding: 60px 0;
+    }
+    
+    .story-content {
+        padding: 20px;
+    }
+    
+    .story-actions {
+        padding: 0 20px 20px;
+    }
+    
+    .network-feature {
+        padding: 30px 20px;
+    }
+    
+    .mentorship-card {
+        padding: 30px 20px;
+    }
+    
+    .outcomes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .companies-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .alumni-cta-section .cta-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .alumni-cta-section .cta-content p {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet specific styles for Alumni page */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .network-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .outcomes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .companies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* Contact Page Responsive Styles */
+@media (max-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .contact-form-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .form-container {
+        padding: 30px 20px;
+    }
+    
+    .departments-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .faq-question {
+        padding: 20px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 0 20px 20px;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+    
+    .visit-notes {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .emergency-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info-section {
+        padding: 60px 0;
+    }
+    
+    .contact-info-card {
+        padding: 30px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .contact-form-section {
+        padding: 60px 0;
+    }
+    
+    .form-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .departments-section,
+    .faq-section,
+    .map-section,
+    .emergency-section {
+        padding: 60px 0;
+    }
+    
+    .department-card {
+        padding: 30px 20px;
+    }
+    
+    .map-placeholder i {
+        font-size: 3rem;
+    }
+    
+    .visit-note {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .emergency-icon i {
+        font-size: 3rem;
+    }
+}
+
+/* Tablet specific styles for Contact page */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .contact-info-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .departments-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .visit-notes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

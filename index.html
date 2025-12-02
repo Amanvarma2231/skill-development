@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TechSkill NGO - Empowering Students with Technical Education and Cybersecurity Awareness">
+	<meta name="keywords" content="TechSkill NGO, Technical Education, Cybersecurity, Digital Safety, Student Empowerment, Coding Skills, Workshops">
+  	<meta name="author" content="Aman Varma">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechSkill NGO - Empowering Students with Technical Education</title>
+    <title>Aman Varma</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+    <!-- Side Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="logo-text">TechSkill NGO</span>
+            </div>
+            <button class="close-btn" id="closeBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-links">
+            <li>
+                <a href="index.html" class="nav-link active">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="pages/about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="pages/courses.html" class="nav-link">
+                    <i class="fas fa-book-open"></i>
+                    <span>Courses</span>
+                </a>
+            </li>
+            <li>
+                <a href="pages/faculties.html" class="nav-link">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Faculties</span>
+                </a>
+            </li>
+            <li>
+                <a href="pages/gallery.html" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="pages/events.html" class="nav-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+            <li>
+                <a href="pages/donors.html" class="nav-link">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Donors</span>
+                </a>
+            </li>
+            <li>
+                <a href="pages/alumni.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Alumni</span>
+                </a>
+            </li>
+            <li>
+                <a href="pages/contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Top Header -->
+        <header class="top-header">
+           <div style="display: flex;"> <button class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div id="branding">
+		    <h1><i><span class="highlighted">TechSkill&nbsp;</span>NGO</i></h1>
+        </div></div>
+            <div class="header-actions">
+                <button class="btn btn-primary">Donate Now</button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-particles"></div>
+                <div class="hero-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                </div>
+            </div>
+            
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-text">🚀 Transforming Education Since 2020</span>
+                    </div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Empowering Students with</span>
+                        <span class="title-highlight" id="dynamicText">Technical Skills</span>
+                    </h1>
+                    <p class="hero-description">
+                        Building future tech leaders through cybersecurity awareness, coding skills, and digital safety education for schools and colleges.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-large" id="exploreBtn">
+                            <i class="fas fa-rocket"></i> Explore Courses
+                        </button>
+                        <button class="btn btn-secondary btn-large" id="workshopBtn">
+                            <i class="fas fa-users"></i> Join Workshop
+                        </button>
+                    </div>
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Cybersecurity Focus</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certified Programs</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Flexible Learning</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hero-visual">
+                    <div class="hero-image-container">
+                        <div class="hero-image main-image">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" alt="Students learning technology" loading="lazy">
+                            <div class="image-overlay">
+                                <div class="play-button" onclick="showVideoModal()">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="floating-cards">
+                            <div class="floating-card card-1">
+                                <i class="fas fa-code"></i>
+                                <span>Web Dev</span>
+                            </div>
+                            <div class="floating-card card-2">
+                                <i class="fas fa-lock"></i>
+                                <span>Security</span>
+                            </div>
+                            <div class="floating-card card-3">
+                                <i class="fas fa-mobile-alt"></i>
+                                <span>Mobile</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="5000">0</h3>
+                    <p class="stat-label">Students Trained</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="150">0</h3>
+                    <p class="stat-label">Workshops Conducted</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="25">0</h3>
+                    <p class="stat-label">Partner Schools</p>
+                </div>
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="stat-number" data-count="98">0</h3>
+                    <p class="stat-label">Success Rate %</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo Section -->
+        <section class="demo-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Experience Our Learning Platform</h2>
+                    <p>Try our interactive tools and see the difference</p>
+                </div>
+                <div class="demo-container">
+                    <div class="demo-tabs">
+                        <button class="demo-tab active" data-tab="coding">Coding Lab</button>
+                        <button class="demo-tab" data-tab="security">Security Tools</button>
+                        <button class="demo-tab" data-tab="projects">Live Projects</button>
+                    </div>
+                    <div class="demo-content">
+                        <div class="demo-panel active" id="coding">
+                            <div class="code-editor">
+                                <div class="editor-header">
+                                    <span class="file-name">hello-world.js</span>
+                                    <button class="run-btn" onclick="runCode()">▶ Run</button>
+                                </div>
+                                <div class="editor-content">
+                                    <textarea id="codeEditor" placeholder="// Try coding here...
+console.log('Hello, TechSkill NGO!');
+
+// Create a simple function
+function greetStudent(name) {
+    return `Welcome ${name} to our coding journey!`;
+}
+
+greetStudent('Future Developer');"></textarea>
+                                </div>
+                                <div class="editor-output" id="codeOutput">
+                                    <div class="output-header">Output:</div>
+                                    <div class="output-content">Click 'Run' to see the magic! ✨</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-panel" id="security">
+                            <div class="security-tools">
+                                <div class="tool-card interactive">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <h3>Password Strength Checker</h3>
+                                    <input type="password" placeholder="Test your password..." id="quickPassword" oninput="quickPasswordCheck()">
+                                    <div class="quick-result" id="quickResult">Enter a password to test</div>
+                                    <button class="btn btn-outline">Full Tool</button>
+                                </div>
+                                <div class="tool-card interactive">
+                                    <i class="fas fa-user-shield"></i>
+                                    <h3>Privacy Checker</h3>
+                                    <p>Audit your social media privacy</p>
+                                    <button class="btn btn-outline">Use Tool</button>
+                                </div>
+                                <div class="tool-card interactive">
+                                    <i class="fas fa-lock"></i>
+                                    <h3>Cybersecurity Quiz</h3>
+                                    <p>Test your security knowledge</p>
+                                    <button class="btn btn-outline">Start Quiz</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-panel" id="projects">
+                            <div class="projects-showcase">
+                                <div class="project-card">
+                                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=300&h=200&fit=crop" alt="Web Development Project">
+                                    <div class="project-info">
+                                        <h4>E-Commerce Website</h4>
+                                        <p>Full-stack web development</p>
+                                        <span class="project-tech">React • Node.js • MongoDB</span>
+                                    </div>
+                                </div>
+                                <div class="project-card">
+                                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=300&h=200&fit=crop" alt="Mobile App Project">
+                                    <div class="project-info">
+                                        <h4>Security Scanner App</h4>
+                                        <p>Mobile cybersecurity tool</p>
+                                        <span class="project-tech">Flutter • Firebase • AI</span>
+                                    </div>
+                                </div>
+                                <div class="project-card">
+                                    <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=300&h=200&fit=crop" alt="AI Project">
+                                    <div class="project-info">
+                                        <h4>AI Chatbot</h4>
+                                        <p>Intelligent learning assistant</p>
+                                        <span class="project-tech">Python • TensorFlow • NLP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Stories Section -->
+        <section class="success-stories">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Success Stories</h2>
+                    <p>Real students, real achievements, real impact</p>
+                </div>
+                <div class="stories-slider">
+                    <div class="story-card active">
+                        <div class="story-image">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Student Success Story">
+                        </div>
+                        <div class="story-content">
+                            <h4>Rahul Sharma</h4>
+                            <p class="story-role">Software Engineer at Google</p>
+                            <p class="story-text">"TechSkill NGO transformed my understanding of cybersecurity. The hands-on workshops gave me the confidence to pursue my dream job!"</p>
+                            <div class="story-achievement">
+                                <span class="achievement-badge">🏆 Placed at Google</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" alt="Student Success Story">
+                        </div>
+                        <div class="story-content">
+                            <h4>Priya Patel</h4>
+                            <p class="story-role">Cybersecurity Analyst</p>
+                            <p class="story-text">"The digital safety programs helped me build a career in cybersecurity. Now I'm protecting organizations from cyber threats!"</p>
+                            <div class="story-achievement">
+                                <span class="achievement-badge">🛡️ Security Expert</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story-card">
+                        <div class="story-image">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Student Success Story">
+                        </div>
+                        <div class="story-content">
+                            <h4>Arjun Kumar</h4>
+                            <p class="story-role">Full Stack Developer</p>
+                            <p class="story-text">"From zero coding knowledge to building full-stack applications. The mentorship and practical projects made all the difference!"</p>
+                            <div class="story-achievement">
+                                <span class="achievement-badge">💻 Tech Entrepreneur</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev" onclick="changeStory(-1)">‹</button>
+                    <div class="slider-dots">
+                        <span class="dot active" onclick="currentStory(1)"></span>
+                        <span class="dot" onclick="currentStory(2)"></span>
+                        <span class="dot" onclick="currentStory(3)"></span>
+                    </div>
+                    <button class="slider-btn next" onclick="changeStory(1)">›</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Focus Areas</h2>
+                    <p>Comprehensive technical education and safety programs</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Technical Skills</h3>
+                        <p>Programming, Web Development, and IT fundamentals for B.Tech CSE students</p>
+                        <div class="feature-stats">
+                            <span class="stat">15+ Technologies</span>
+                            <span class="stat">200+ Projects</span>
+                        </div>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <h3>Cybersecurity</h3>
+                        <p>Awareness about online frauds, data protection, and secure practices</p>
+                        <div class="feature-stats">
+                            <span class="stat">50+ Security Topics</span>
+                            <span class="stat">1000+ Students Protected</span>
+                        </div>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-icon">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <h3>Girls' Safety</h3>
+                        <p>Protection from online harassment and social media security</p>
+                        <div class="feature-stats">
+                            <span class="stat">Safe Learning Environment</span>
+                            <span class="stat">24/7 Support</span>
+                        </div>
+                    </div>
+                    <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="feature-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Tech Tools</h3>
+                        <p>Small utilities and applications for practical learning</p>
+                        <div class="feature-stats">
+                            <span class="stat">10+ Interactive Tools</span>
+                            <span class="stat">Real-time Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechSkill NGO</h3>
+                    <p>Empowering students with technical education and digital safety awareness.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/courses.html">Courses</a></li>
+                        <li><a href="pages/events.html">Events</a></li>
+                        <li><a href="pages/gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Education City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@techskillngo.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechSkill NGO. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeVideoModal()">&times;</span>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Dynamic text animation
+        const dynamicTexts = ['Technical Skills', 'Cybersecurity', 'Digital Safety', 'Future Careers'];
+        let textIndex = 0;
+        
+        function changeDynamicText() {
+            const textElement = document.getElementById('dynamicText');
+            textElement.style.opacity = '0';
+            setTimeout(() => {
+                textIndex = (textIndex + 1) % dynamicTexts.length;
+                textElement.textContent = dynamicTexts[textIndex];
+                textElement.style.opacity = '1';
+            }, 300);
+        }
+        
+        setInterval(changeDynamicText, 3000);
+        
+        // Demo tabs
+        document.querySelectorAll('.demo-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.demo-panel').forEach(p => p.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+        
+        // Code editor
+        function runCode() {
+            const code = document.getElementById('codeEditor').value || document.getElementById('codeEditor').placeholder;
+            const output = document.querySelector('.output-content');
+            
+            try {
+                let result = '';
+                const originalLog = console.log;
+                console.log = (...args) => {
+                    result += args.join(' ') + '\n';
+                };
+                
+                eval(code);
+                console.log = originalLog;
+                
+                output.innerHTML = result || 'Code executed successfully! ✅';
+            } catch (error) {
+                output.innerHTML = `Error: ${error.message} ❌`;
+            }
+        }
+        
+        // Quick password check
+        function quickPasswordCheck() {
+            const password = document.getElementById('quickPassword').value;
+            const result = document.getElementById('quickResult');
+            
+            if (!password) {
+                result.textContent = 'Enter a password to test';
+                result.className = 'quick-result';
+                return;
+            }
+            
+            let score = 0;
+            if (password.length >= 8) score += 25;
+            if (/[A-Z]/.test(password)) score += 25;
+            if (/[a-z]/.test(password)) score += 25;
+            if (/[0-9]/.test(password) && /[^A-Za-z0-9]/.test(password)) score += 25;
+            
+            if (score < 50) {
+                result.textContent = '🔴 Weak - Needs improvement';
+                result.className = 'quick-result weak';
+            } else if (score < 75) {
+                result.textContent = '🟡 Medium - Getting better';
+                result.className = 'quick-result medium';
+            } else {
+                result.textContent = '🟢 Strong - Well done!';
+                result.className = 'quick-result strong';
+            }
+        }
+        
+        // Success stories slider
+        let currentStoryIndex = 0;
+        
+        function changeStory(direction) {
+            const stories = document.querySelectorAll('.story-card');
+            const dots = document.querySelectorAll('.dot');
+            
+            stories[currentStoryIndex].classList.remove('active');
+            dots[currentStoryIndex].classList.remove('active');
+            
+            currentStoryIndex = (currentStoryIndex + direction + stories.length) % stories.length;
+            
+            stories[currentStoryIndex].classList.add('active');
+            dots[currentStoryIndex].classList.add('active');
+        }
+        
+        function currentStory(index) {
+            const stories = document.querySelectorAll('.story-card');
+            const dots = document.querySelectorAll('.dot');
+            
+            stories[currentStoryIndex].classList.remove('active');
+            dots[currentStoryIndex].classList.remove('active');
+            
+            currentStoryIndex = index - 1;
+            
+            stories[currentStoryIndex].classList.add('active');
+            dots[currentStoryIndex].classList.add('active');
+        }
+        
+        // Auto-advance stories
+        setInterval(() => changeStory(1), 5000);
+        
+        // Video modal
+        function showVideoModal() {
+            document.getElementById('videoModal').style.display = 'flex';
+        }
+        
+        function closeVideoModal() {
+            document.getElementById('videoModal').style.display = 'none';
+        }
+        
+        // Particles animation
+        function createParticles() {
+            const container = document.querySelector('.hero-particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                container.appendChild(particle);
+            }
+        }
+        
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TechSkill NGO - Empowering Students with Technical Education and Cybersecurity Awareness">
+	<meta name="keywords" content="TechSkill NGO, Technical Education, Cybersecurity, Digital Safety, Student Empowerment, Coding Skills, Workshops">
+  	<meta name="author" content="Aman Varma">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - TechSkill NGO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Side Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="logo-text">TechSkill NGO</span>
+            </div>
+            <button class="close-btn" id="closeBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="courses.html" class="nav-link">
+                    <i class="fas fa-book-open"></i>
+                    <span>Courses</span>
+                </a>
+            </li>
+            <li>
+                <a href="faculties.html" class="nav-link">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Faculties</span>
+                </a>
+            </li>
+            <li>
+                <a href="gallery.html" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="events.html" class="nav-link active">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+            <li>
+                <a href="donors.html" class="nav-link">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Donors</span>
+                </a>
+            </li>
+            <li>
+                <a href="alumni.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Alumni</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Top Header -->
+        <header class="top-header">
+            <button class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-actions">
+                <button class="btn btn-primary">Donate Now</button>
+            </div>
+        </header>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Upcoming Events</h1>
+                <p class="page-description">Join our workshops, seminars, and tech events</p>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Events</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Events Navigation -->
+        <section class="events-navigation">
+            <div class="container">
+                <div class="events-tabs">
+                    <button class="tab-btn active" data-tab="upcoming">Upcoming Events</button>
+                    <button class="tab-btn" data-tab="past">Past Events</button>
+                    <button class="tab-btn" data-tab="webinars">Online Webinars</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Filter Section -->
+        <section class="events-filter-section">
+            <div class="container">
+                <div class="filter-header">
+                    <h3>Find Events That Interest You</h3>
+                    <p>Filter by category, date, or location</p>
+                </div>
+                <div class="events-filter-controls">
+                    <div class="filter-group">
+                        <label for="eventCategoryFilter">Category</label>
+                        <select id="eventCategoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="seminar">Seminar</option>
+                            <option value="webinar">Webinar</option>
+                            <option value="conference">Conference</option>
+                            <option value="competition">Competition</option>
+                            <option value="training">Training</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="eventDateFilter">Date</label>
+                        <select id="eventDateFilter" class="filter-select">
+                            <option value="all">All Dates</option>
+                            <option value="this-week">This Week</option>
+                            <option value="this-month">This Month</option>
+                            <option value="next-month">Next Month</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="eventLocationFilter">Location</label>
+                        <select id="eventLocationFilter" class="filter-select">
+                            <option value="all">All Locations</option>
+                            <option value="online">Online</option>
+                            <option value="delhi">Delhi</option>
+                            <option value="mumbai">Mumbai</option>
+                            <option value="bangalore">Bangalore</option>
+                            <option value="hyderabad">Hyderabad</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-outline" id="resetEventFilters">
+                        <i class="fas fa-redo"></i>
+                        Reset Filters
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upcoming Events Section -->
+        <section class="events-section" id="upcoming-events">
+            <div class="container">
+                <div class="events-grid" id="eventsGrid">
+                    <!-- Event 1 -->
+                    <div class="event-card" data-category="workshop" data-date="this-week" data-location="delhi">
+                        <div class="event-badge upcoming">Upcoming</div>
+                        <div class="event-date">
+                            <div class="date-day">15</div>
+                            <div class="date-month">APR</div>
+                            <div class="date-year">2024</div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Cybersecurity Basics Workshop</h3>
+                            <p class="event-description">
+                                Learn fundamental cybersecurity concepts, password security, and online safety practices.
+                            </p>
+                            <div class="event-meta">
+                                <div class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>10:00 AM - 4:00 PM</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Delhi Public School, Delhi</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>50 Seats Available</span>
+                                </div>
+                            </div>
+                            <div class="event-tags">
+                                <span class="event-tag">Cybersecurity</span>
+                                <span class="event-tag">Beginner</span>
+                                <span class="event-tag">Workshop</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn btn-primary btn-block register-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Register Now
+                            </button>
+                            <button class="btn btn-outline btn-block details-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="event-card" data-category="webinar" data-date="this-week" data-location="online">
+                        <div class="event-badge upcoming">Upcoming</div>
+                        <div class="event-date">
+                            <div class="date-day">18</div>
+                            <div class="date-month">APR</div>
+                            <div class="date-year">2024</div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Girls Online Safety Webinar</h3>
+                            <p class="event-description">
+                                Special webinar focusing on digital safety, privacy protection, and handling online harassment.
+                            </p>
+                            <div class="event-meta">
+                                <div class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>3:00 PM - 5:00 PM</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Online (Zoom)</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Unlimited Seats</span>
+                                </div>
+                            </div>
+                            <div class="event-tags">
+                                <span class="event-tag">Safety</span>
+                                <span class="event-tag">Webinar</span>
+                                <span class="event-tag">Girls Only</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn btn-primary btn-block register-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Register Now
+                            </button>
+                            <button class="btn btn-outline btn-block details-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="event-card" data-category="seminar" data-date="this-month" data-location="mumbai">
+                        <div class="event-badge upcoming">Upcoming</div>
+                        <div class="event-date">
+                            <div class="date-day">22</div>
+                            <div class="date-month">APR</div>
+                            <div class="date-year">2024</div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Python Programming Seminar</h3>
+                            <p class="event-description">
+                                Comprehensive seminar covering Python basics, data structures, and real-world applications.
+                            </p>
+                            <div class="event-meta">
+                                <div class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>9:30 AM - 1:30 PM</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>IIT Mumbai Campus</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>100 Seats Available</span>
+                                </div>
+                            </div>
+                            <div class="event-tags">
+                                <span class="event-tag">Programming</span>
+                                <span class="event-tag">Python</span>
+                                <span class="event-tag">Seminar</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn btn-primary btn-block register-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Register Now
+                            </button>
+                            <button class="btn btn-outline btn-block details-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Event 4 -->
+                    <div class="event-card" data-category="training" data-date="next-month" data-location="bangalore">
+                        <div class="event-badge upcoming">Upcoming</div>
+                        <div class="event-date">
+                            <div class="date-day">05</div>
+                            <div class="date-month">MAY</div>
+                            <div class="date-year">2024</div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Advanced Web Development Training</h3>
+                            <p class="event-description">
+                                3-day intensive training on modern web development technologies and frameworks.
+                            </p>
+                            <div class="event-meta">
+                                <div class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>9:00 AM - 5:00 PM</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Tech Park, Bangalore</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>30 Seats Available</span>
+                                </div>
+                            </div>
+                            <div class="event-tags">
+                                <span class="event-tag">Web Development</span>
+                                <span class="event-tag">Advanced</span>
+                                <span class="event-tag">Training</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn btn-primary btn-block register-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Register Now
+                            </button>
+                            <button class="btn btn-outline btn-block details-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Event 5 -->
+                    <div class="event-card" data-category="competition" data-date="next-month" data-location="hyderabad">
+                        <div class="event-badge upcoming">Upcoming</div>
+                        <div class="event-date">
+                            <div class="date-day">12</div>
+                            <div class="date-month">MAY</div>
+                            <div class="date-year">2024</div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Cyber Security Challenge 2024</h3>
+                            <p class="event-description">
+                                Annual cybersecurity competition for college students. Test your skills and win prizes!
+                            </p>
+                            <div class="event-meta">
+                                <div class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>10:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>University of Hyderabad</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Team Event (4 members)</span>
+                                </div>
+                            </div>
+                            <div class="event-tags">
+                                <span class="event-tag">Competition</span>
+                                <span class="event-tag">Cybersecurity</span>
+                                <span class="event-tag">Advanced</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn btn-primary btn-block register-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Register Now
+                            </button>
+                            <button class="btn btn-outline btn-block details-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Event 6 -->
+                    <div class="event-card" data-category="webinar" data-date="this-week" data-location="online">
+                        <div class="event-badge upcoming">Upcoming</div>
+                        <div class="event-date">
+                            <div class="date-day">20</div>
+                            <div class="date-month">APR</div>
+                            <div class="date-year">2024</div>
+                        </div>
+                        <div class="event-content">
+                            <h3 class="event-title">Data Privacy & Protection Webinar</h3>
+                            <p class="event-description">
+                                Learn how to protect your personal data and understand privacy laws and regulations.
+                            </p>
+                            <div class="event-meta">
+                                <div class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    <span>2:00 PM - 4:00 PM</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Online (Microsoft Teams)</span>
+                                </div>
+                                <div class="meta-item">
+                                    <i class="fas fa-users"></i>
+                                    <span>Unlimited Seats</span>
+                                </div>
+                            </div>
+                            <div class="event-tags">
+                                <span class="event-tag">Privacy</span>
+                                <span class="event-tag">Webinar</span>
+                                <span class="event-tag">All Levels</span>
+                            </div>
+                        </div>
+                        <div class="event-actions">
+                            <button class="btn btn-primary btn-block register-btn">
+                                <i class="fas fa-user-plus"></i>
+                                Register Now
+                            </button>
+                            <button class="btn btn-outline btn-block details-btn">
+                                <i class="fas fa-info-circle"></i>
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-results" id="noEventsResults" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No Events Found</h3>
+                        <p>Try adjusting your filters to see more events.</p>
+                        <button class="btn btn-primary" id="resetEventsFiltersBtn">Reset All Filters</button>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="load-more-section">
+                    <button class="btn btn-outline" id="loadMoreEventsBtn">
+                        <i class="fas fa-plus"></i>
+                        Load More Events
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calendar View Section -->
+        <section class="calendar-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Event Calendar</h2>
+                    <p>View all events in calendar format</p>
+                </div>
+                <div class="calendar-view">
+                    <div class="calendar-header">
+                        <button class="calendar-nav-btn" id="prevMonth">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <h3 id="currentMonth">April 2024</h3>
+                        <button class="calendar-nav-btn" id="nextMonth">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="calendar-grid" id="calendarGrid">
+                        <!-- Calendar will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Highlights Section -->
+        <section class="highlights-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Event Highlights</h2>
+                    <p>Featured events and special programs</p>
+                </div>
+                <div class="highlights-grid">
+                    <div class="highlight-card featured">
+                        <div class="highlight-badge">Featured</div>
+                        <div class="highlight-content">
+                            <h3>National Cybersecurity Awareness Month</h3>
+                            <p>Month-long campaign with workshops, webinars, and competitions focused on cybersecurity education.</p>
+                            <div class="highlight-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-calendar"></i>
+                                    April 1-30, 2024
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Multiple Locations
+                                </span>
+                            </div>
+                            <button class="btn btn-primary">Learn More</button>
+                        </div>
+                    </div>
+                    <div class="highlight-card special">
+                        <div class="highlight-badge">Special Program</div>
+                        <div class="highlight-content">
+                            <h3>Women in Tech Initiative</h3>
+                            <p>Dedicated programs and mentorship for female students pursuing technology careers.</p>
+                            <div class="highlight-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-calendar"></i>
+                                    Ongoing
+                                </span>
+                                <span class="meta-item">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    Pan-India
+                                </span>
+                            </div>
+                            <button class="btn btn-secondary">Join Program</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="events-cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Can't Find What You're Looking For?</h2>
+                    <p>Suggest an event topic or request a custom workshop for your school or college</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary btn-large">Suggest Event</button>
+                        <button class="btn btn-secondary btn-large">Contact Organizer</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechSkill NGO</h3>
+                    <p>Empowering students with technical education and digital safety awareness.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Education City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@techskillngo.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechSkill NGO. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/events.js"></script>
+</body>
+</html>

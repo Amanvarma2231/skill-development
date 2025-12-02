@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Checker - TechSkill NGO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-content">
+        <header class="top-header">
+            <div style="display: flex;">
+                <a href="../index.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+                <div id="branding">
+                    <h1><i><span class="highlighted">TechSkill&nbsp;</span>NGO</i></h1>
+                </div>
+            </div>
+        </header>
+
+        <section class="page-header">
+            <div class="container">
+                <h1><i class="fas fa-user-shield"></i> Privacy Checker</h1>
+                <p>Audit your social media privacy settings and get recommendations for better security.</p>
+            </div>
+        </section>
+        
+        <section class="tool-section">
+            <div class="container">
+                <div class="tool-content">
+                    <div class="privacy-checklist">
+                        <h3><i class="fas fa-list-check"></i> Privacy Checklist</h3>
+                        <p class="checklist-intro">Review each item and check the boxes that apply to your current privacy settings:</p>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="profile-visibility">
+                            <label for="profile-visibility">Profile is not publicly visible</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="friend-requests">
+                            <label for="friend-requests">Friend requests are restricted</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="location-sharing">
+                            <label for="location-sharing">Location sharing is disabled</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="contact-info">
+                            <label for="contact-info">Contact information is private</label>
+                        </div>
+                        <div class="checklist-item">
+                            <input type="checkbox" id="post-visibility">
+                            <label for="post-visibility">Posts are visible to friends only</label>
+                        </div>
+                        <div class="button-group">
+                            <button class="btn btn-primary" onclick="checkPrivacy()">
+                                <i class="fas fa-calculator"></i> Calculate Privacy Score
+                            </button>
+                            <button class="btn btn-outline" onclick="resetChecklist()">
+                                <i class="fas fa-redo"></i> Reset
+                            </button>
+                        </div>
+                        <div id="privacy-result" class="result-section"></div>
+                        
+                        <div class="privacy-tips">
+                            <h4><i class="fas fa-lightbulb"></i> Privacy Protection Tips</h4>
+                            <ul>
+                                <li>Regularly review your privacy settings on all social platforms</li>
+                                <li>Limit personal information visible to strangers</li>
+                                <li>Be cautious about location sharing</li>
+                                <li>Use strong, unique passwords for each account</li>
+                                <li>Enable two-factor authentication where available</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function checkPrivacy() {
+            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            const checked = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const total = checkboxes.length;
+            const score = Math.round((checked / total) * 100);
+            
+            const resultDiv = document.getElementById('privacy-result');
+            let message = '';
+            let className = '';
+            let recommendations = [];
+            
+            if (score >= 80) {
+                message = '🛡️ Excellent! Your privacy settings are well configured.';
+                className = 'success';
+                recommendations = ['Keep monitoring your settings regularly', 'Stay updated on new privacy features'];
+            } else if (score >= 60) {
+                message = '⚠️ Good start, but there\'s room for improvement.';
+                className = 'warning';
+                recommendations = ['Review unchecked items above', 'Consider enabling additional privacy controls'];
+            } else {
+                message = '🚨 Your privacy needs immediate attention!';
+                className = 'danger';
+                recommendations = ['Start with the most critical settings', 'Consider making your profile private', 'Review all sharing permissions'];
+            }
+            
+            resultDiv.innerHTML = `
+                <div class="privacy-score ${className}">
+                    <h4>Privacy Score: ${score}/100</h4>
+                    <p>${message}</p>
+                    <div class="recommendations">
+                        <h5>📋 Next Steps:</h5>
+                        <ul>
+                            ${recommendations.map(rec => `<li>${rec}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+            
+            resultDiv.style.opacity = '0';
+            resultDiv.style.transform = 'translateY(20px)';
+            setTimeout(() => {
+                resultDiv.style.opacity = '1';
+                resultDiv.style.transform = 'translateY(0)';
+            }, 100);
+        }
+        
+        function resetChecklist() {
+            const checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+            checkboxes.forEach(cb => cb.checked = false);
+            document.getElementById('privacy-result').innerHTML = '';
+        }
+    </script>
+</body>
+</html>

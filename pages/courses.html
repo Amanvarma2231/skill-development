@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="TechSkill NGO - Empowering Students with Technical Education and Cybersecurity Awareness">
+    <meta name="keywords" content="TechSkill NGO, Technical Education, Cybersecurity, Digital Safety, Student Empowerment, Coding Skills, Workshops">
+    <meta name="author" content="Aman Varma">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - TechSkill NGO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Side Navigation -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                <span class="logo-text">TechSkill NGO</span>
+            </div>
+            <button class="close-btn" id="closeBtn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <ul class="nav-links">
+            <li>
+                <a href="../index.html" class="nav-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="about.html" class="nav-link">
+                    <i class="fas fa-info-circle"></i>
+                    <span>About Us</span>
+                </a>
+            </li>
+            <li>
+                <a href="courses.html" class="nav-link active">
+                    <i class="fas fa-book-open"></i>
+                    <span>Courses</span>
+                </a>
+            </li>
+            <li>
+                <a href="faculties.html" class="nav-link">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                    <span>Faculties</span>
+                </a>
+            </li>
+            <li>
+                <a href="gallery.html" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="events.html" class="nav-link">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Events</span>
+                </a>
+            </li>
+            <li>
+                <a href="donors.html" class="nav-link">
+                    <i class="fas fa-hand-holding-heart"></i>
+                    <span>Donors</span>
+                </a>
+            </li>
+            <li>
+                <a href="alumni.html" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Alumni</span>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html" class="nav-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        
+        <div class="sidebar-footer">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <!-- Top Header -->
+        <header class="top-header">
+            <button class="menu-btn" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-actions">
+                <button class="btn btn-primary">Donate Now</button>
+            </div>
+        </header>
+
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Our Courses</h1>
+                <p class="page-description">Comprehensive technical education programs for schools and colleges</p>
+                <nav class="breadcrumb">
+                    <a href="../index.html">Home</a>
+                    <span class="separator">/</span>
+                    <span class="current">Courses</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Course Filter Section -->
+        <section class="filter-section">
+            <div class="container">
+                <div class="filter-header">
+                    <h3>Find Your Perfect Course</h3>
+                    <p>Filter by category, difficulty level, or duration</p>
+                </div>
+                <div class="filter-controls">
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category</label>
+                        <select id="categoryFilter" class="filter-select">
+                            <option value="all">All Categories</option>
+                            <option value="cybersecurity">Cybersecurity</option>
+                            <option value="programming">Programming</option>
+                            <option value="web-dev">Web Development</option>
+                            <option value="safety">Online Safety</option>
+                            <option value="tools">Tech Tools</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="levelFilter">Difficulty</label>
+                        <select id="levelFilter" class="filter-select">
+                            <option value="all">All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="durationFilter">Duration</label>
+                        <select id="durationFilter" class="filter-select">
+                            <option value="all">Any Duration</option>
+                            <option value="short">Short (1-4 weeks)</option>
+                            <option value="medium">Medium (1-3 months)</option>
+                            <option value="long">Long (3+ months)</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-outline" id="resetFilters">
+                        <i class="fas fa-redo"></i>
+                        Reset Filters
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses Grid Section -->
+        <section class="courses-section">
+            <div class="container">
+                <div class="courses-grid" id="coursesGrid">
+                    <!-- Cybersecurity Courses -->
+                    <div class="course-card" data-category="cybersecurity" data-level="beginner" data-duration="short">
+                        <div class="course-badge beginner">Beginner</div>
+                        <div class="course-image">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Cybersecurity Fundamentals</h3>
+                            <p class="course-description">
+                                Learn basic cybersecurity concepts, online threats, and protection methods for everyday digital safety.
+                            </p>
+                            <div class="course-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    4 Weeks
+                                </span>
+                                <span class="meta-item">
+                                    <i class="far fa-user"></i>
+                                    School Students
+                                </span>
+                            </div>
+                            <div class="course-topics">
+                                <span class="topic-tag">Online Safety</span>
+                                <span class="topic-tag">Password Security</span>
+                                <span class="topic-tag">Fraud Awareness</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary btn-block">Enroll Now</button>
+                            <button class="btn btn-outline btn-block course-details-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="cybersecurity" data-level="intermediate" data-duration="medium">
+                        <div class="course-badge intermediate">Intermediate</div>
+                        <div class="course-image">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Advanced Cyber Defense</h3>
+                            <p class="course-description">
+                                Advanced techniques in network security, ethical hacking, and digital forensics for college students.
+                            </p>
+                            <div class="course-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    8 Weeks
+                                </span>
+                                <span class="meta-item">
+                                    <i class="far fa-user"></i>
+                                    College Students
+                                </span>
+                            </div>
+                            <div class="course-topics">
+                                <span class="topic-tag">Network Security</span>
+                                <span class="topic-tag">Ethical Hacking</span>
+                                <span class="topic-tag">Digital Forensics</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary btn-block">Enroll Now</button>
+                            <button class="btn btn-outline btn-block course-details-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Programming Courses -->
+                    <div class="course-card" data-category="programming" data-level="beginner" data-duration="medium">
+                        <div class="course-badge beginner">Beginner</div>
+                        <div class="course-image">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Python Programming Basics</h3>
+                            <p class="course-description">
+                                Introduction to programming with Python. Learn variables, loops, functions, and basic algorithms.
+                            </p>
+                            <div class="course-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    6 Weeks
+                                </span>
+                                <span class="meta-item">
+                                    <i class="far fa-user"></i>
+                                    High School+
+                                </span>
+                            </div>
+                            <div class="course-topics">
+                                <span class="topic-tag">Python Basics</span>
+                                <span class="topic-tag">Algorithms</span>
+                                <span class="topic-tag">Problem Solving</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary btn-block">Enroll Now</button>
+                            <button class="btn btn-outline btn-block course-details-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="programming" data-level="intermediate" data-duration="long">
+                        <div class="course-badge intermediate">Intermediate</div>
+                        <div class="course-image">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Java for B.Tech CSE</h3>
+                            <p class="course-description">
+                                Comprehensive Java programming course covering OOP concepts, data structures, and advanced features.
+                            </p>
+                            <div class="course-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    12 Weeks
+                                </span>
+                                <span class="meta-item">
+                                    <i class="far fa-user"></i>
+                                    B.Tech Students
+                                </span>
+                            </div>
+                            <div class="course-topics">
+                                <span class="topic-tag">Object-Oriented</span>
+                                <span class="topic-tag">Data Structures</span>
+                                <span class="topic-tag">Advanced Java</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary btn-block">Enroll Now</button>
+                            <button class="btn btn-outline btn-block course-details-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Web Development Courses -->
+                    <div class="course-card" data-category="web-dev" data-level="beginner" data-duration="medium">
+                        <div class="course-badge beginner">Beginner</div>
+                        <div class="course-image">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Web Development Fundamentals</h3>
+                            <p class="course-description">
+                                Learn HTML, CSS, and JavaScript to build responsive and interactive websites from scratch.
+                            </p>
+                            <div class="course-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    8 Weeks
+                                </span>
+                                <span class="meta-item">
+                                    <i class="far fa-user"></i>
+                                    All Students
+                                </span>
+                            </div>
+                            <div class="course-topics">
+                                <span class="topic-tag">HTML/CSS</span>
+                                <span class="topic-tag">JavaScript</span>
+                                <span class="topic-tag">Responsive Design</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary btn-block">Enroll Now</button>
+                            <button class="btn btn-outline btn-block course-details-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Safety Courses -->
+                    <div class="course-card" data-category="safety" data-level="beginner" data-duration="short">
+                        <div class="course-badge beginner">Beginner</div>
+                        <div class="course-image">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Girls Online Safety</h3>
+                            <p class="course-description">
+                                Specialized course focusing on online safety, privacy protection, and dealing with cyber harassment.
+                            </p>
+                            <div class="course-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    3 Weeks
+                                </span>
+                                <span class="meta-item">
+                                    <i class="far fa-user"></i>
+                                    Girls Only
+                                </span>
+                            </div>
+                            <div class="course-topics">
+                                <span class="topic-tag">Privacy Settings</span>
+                                <span class="topic-tag">Safe Social Media</span>
+                                <span class="topic-tag">Support Resources</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary btn-block">Enroll Now</button>
+                            <button class="btn btn-outline btn-block course-details-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <!-- Tools Courses -->
+                    <div class="course-card" data-category="tools" data-level="beginner" data-duration="short">
+                        <div class="course-badge beginner">Beginner</div>
+                        <div class="course-image">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Essential Tech Tools</h3>
+                            <p class="course-description">
+                                Master essential software tools, productivity apps, and basic troubleshooting techniques.
+                            </p>
+                            <div class="course-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    4 Weeks
+                                </span>
+                                <span class="meta-item">
+                                    <i class="far fa-user"></i>
+                                    School Students
+                                </span>
+                            </div>
+                            <div class="course-topics">
+                                <span class="topic-tag">Productivity</span>
+                                <span class="topic-tag">Software Tools</span>
+                                <span class="topic-tag">Troubleshooting</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary btn-block">Enroll Now</button>
+                            <button class="btn btn-outline btn-block course-details-btn">View Details</button>
+                        </div>
+                    </div>
+
+                    <div class="course-card" data-category="cybersecurity" data-level="advanced" data-duration="long">
+                        <div class="course-badge advanced">Advanced</div>
+                        <div class="course-image">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="course-content">
+                            <h3 class="course-title">Network Security Expert</h3>
+                            <p class="course-description">
+                                Advanced network security protocols, intrusion detection, and enterprise-level protection strategies.
+                            </p>
+                            <div class="course-meta">
+                                <span class="meta-item">
+                                    <i class="far fa-clock"></i>
+                                    16 Weeks
+                                </span>
+                                <span class="meta-item">
+                                    <i class="far fa-user"></i>
+                                    Advanced Learners
+                                </span>
+                            </div>
+                            <div class="course-topics">
+                                <span class="topic-tag">Network Protocols</span>
+                                <span class="topic-tag">Intrusion Detection</span>
+                                <span class="topic-tag">Enterprise Security</span>
+                            </div>
+                        </div>
+                        <div class="course-actions">
+                            <button class="btn btn-primary btn-block">Enroll Now</button>
+                            <button class="btn btn-outline btn-block course-details-btn">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div class="no-results" id="noResults" style="display: none;">
+                    <div class="no-results-content">
+                        <i class="fas fa-search"></i>
+                        <h3>No Courses Found</h3>
+                        <p>Try adjusting your filters to see more courses.</p>
+                        <button class="btn btn-primary" id="resetFiltersBtn">Reset All Filters</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Course Categories Section -->
+        <section class="categories-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Course Categories</h2>
+                    <p>Explore our specialized learning paths</p>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="cybersecurity">
+                        <div class="category-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Cybersecurity</h3>
+                        <p>Protect yourself and others from online threats</p>
+                        <span class="course-count">8 Courses</span>
+                    </div>
+                    <div class="category-card" data-category="programming">
+                        <div class="category-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programming</h3>
+                        <p>Learn to code from basics to advanced levels</p>
+                        <span class="course-count">6 Courses</span>
+                    </div>
+                    <div class="category-card" data-category="web-dev">
+                        <div class="category-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Web Development</h3>
+                        <p>Build modern, responsive websites and applications</p>
+                        <span class="course-count">4 Courses</span>
+                    </div>
+                    <div class="category-card" data-category="safety">
+                        <div class="category-icon">
+                            <i class="fas fa-user-shield"></i>
+                        </div>
+                        <h3>Online Safety</h3>
+                        <p>Stay safe in the digital world</p>
+                        <span class="course-count">5 Courses</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Students Say</h2>
+                    <p>Real experiences from our course participants</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The cybersecurity course helped me protect my social media accounts from hackers. I now feel much safer online!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <p>Class 11 Student</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"As a B.Tech CSE student, the Java programming course gave me the practical skills I needed for campus placements."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Rahul Verma</h4>
+                                <p>B.Tech CSE Student</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"The girls' safety course empowered me with knowledge to handle online harassment. Thank you for this initiative!"</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-image">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Anjali Patel</h4>
+                                <p>College Student</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Ready to Start Learning?</h2>
+                    <p>Join thousands of students who have transformed their technical skills with our courses</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary btn-large">Browse All Courses</button>
+                        <button class="btn btn-secondary btn-large">Contact Advisor</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TechSkill NGO</h3>
+                    <p>Empowering students with technical education and digital safety awareness.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="events.html">Events</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Help Center</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Tech Street, Education City</p>
+                    <p><i class="fas fa-phone"></i> +1 234 567 8900</p>
+                    <p><i class="fas fa-envelope"></i> info@techskillngo.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TechSkill NGO. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/courses.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Quiz - TechSkill NGO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-content">
+        <header class="top-header">
+            <div style="display: flex;">
+                <a href="../index.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+                <div id="branding">
+                    <h1><i><span class="highlighted">TechSkill&nbsp;</span>NGO</i></h1>
+                </div>
+            </div>
+        </header>
+
+        <section class="tool-section">
+            <div class="container">
+                <h1><i class="fas fa-lock"></i> Cybersecurity Quiz</h1>
+                <p>Test your cybersecurity knowledge with this interactive quiz.</p>
+                
+                <div class="quiz-container" id="quizContainer">
+                    <div class="quiz-question" id="question">
+                        <h3>What is the most secure type of password?</h3>
+                        <div class="quiz-options">
+                            <button class="quiz-option" onclick="selectAnswer(0)">A) Your birthday</button>
+                            <button class="quiz-option" onclick="selectAnswer(1)">B) A mix of letters, numbers, and symbols</button>
+                            <button class="quiz-option" onclick="selectAnswer(2)">C) Your pet's name</button>
+                            <button class="quiz-option" onclick="selectAnswer(3)">D) 123456</button>
+                        </div>
+                    </div>
+                    <div class="quiz-controls">
+                        <button class="btn btn-primary" onclick="nextQuestion()" id="nextBtn" disabled>Next Question</button>
+                        <div class="quiz-progress">Question <span id="currentQ">1</span> of <span id="totalQ">5</span></div>
+                    </div>
+                </div>
+                
+                <div class="quiz-result" id="quizResult" style="display: none;">
+                    <h3>Quiz Complete!</h3>
+                    <div id="finalScore"></div>
+                    <button class="btn btn-primary" onclick="restartQuiz()">Restart Quiz</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        const questions = [
+            {
+                question: "What is the most secure type of password?",
+                options: ["Your birthday", "A mix of letters, numbers, and symbols", "Your pet's name", "123456"],
+                correct: 1
+            },
+            {
+                question: "What should you do if you receive a suspicious email?",
+                options: ["Click all links to investigate", "Delete it immediately", "Forward it to friends", "Reply asking for more info"],
+                correct: 1
+            },
+            {
+                question: "What is phishing?",
+                options: ["A type of fishing", "Attempting to steal personal information", "A computer virus", "A programming language"],
+                correct: 1
+            },
+            {
+                question: "How often should you update your software?",
+                options: ["Never", "Once a year", "Regularly when updates are available", "Only when it breaks"],
+                correct: 2
+            },
+            {
+                question: "What is two-factor authentication?",
+                options: ["Using two passwords", "An extra security layer", "A type of virus", "A social media feature"],
+                correct: 1
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+        let selectedAnswer = -1;
+
+        function selectAnswer(index) {
+            selectedAnswer = index;
+            const options = document.querySelectorAll('.quiz-option');
+            options.forEach((option, i) => {
+                option.classList.remove('selected');
+                if (i === index) option.classList.add('selected');
+            });
+            document.getElementById('nextBtn').disabled = false;
+        }
+
+        function nextQuestion() {
+            if (selectedAnswer === questions[currentQuestion].correct) {
+                score++;
+            }
+            
+            currentQuestion++;
+            selectedAnswer = -1;
+            
+            if (currentQuestion < questions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function loadQuestion() {
+            const q = questions[currentQuestion];
+            document.getElementById('question').innerHTML = `
+                <h3>${q.question}</h3>
+                <div class="quiz-options">
+                    ${q.options.map((option, i) => 
+                        `<button class="quiz-option" onclick="selectAnswer(${i})">${String.fromCharCode(65 + i)}) ${option}</button>`
+                    ).join('')}
+                </div>
+            `;
+            document.getElementById('currentQ').textContent = currentQuestion + 1;
+            document.getElementById('nextBtn').disabled = true;
+        }
+
+        function showResult() {
+            document.getElementById('quizContainer').style.display = 'none';
+            document.getElementById('quizResult').style.display = 'block';
+            
+            const percentage = Math.round((score / questions.length) * 100);
+            let message = '';
+            
+            if (percentage >= 80) message = 'Excellent! You have strong cybersecurity knowledge.';
+            else if (percentage >= 60) message = 'Good job! Keep learning about cybersecurity.';
+            else message = 'You might want to learn more about cybersecurity basics.';
+            
+            document.getElementById('finalScore').innerHTML = `
+                <div class="score-display">
+                    <h4>Your Score: ${score}/${questions.length} (${percentage}%)</h4>
+                    <p>${message}</p>
+                </div>
+            `;
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            selectedAnswer = -1;
+            document.getElementById('quizContainer').style.display = 'block';
+            document.getElementById('quizResult').style.display = 'none';
+            loadQuestion();
+        }
+
+        // Initialize quiz
+        document.getElementById('totalQ').textContent = questions.length;
+        loadQuestion();
+    </script>
+</body>
+</html>

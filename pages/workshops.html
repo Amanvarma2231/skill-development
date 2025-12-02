@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Workshop - TechSkill NGO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-content">
+        <header class="top-header">
+            <div style="display: flex;">
+                <a href="../index.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+                <div id="branding">
+                    <h1><i><span class="highlighted">TechSkill&nbsp;</span>NGO</i></h1>
+                </div>
+            </div>
+        </header>
+
+        <section class="workshop-section">
+            <div class="container">
+                <h1><i class="fas fa-users"></i> Join Our Workshops</h1>
+                <p>Register for upcoming workshops and enhance your technical skills.</p>
+                
+                <div class="workshop-grid">
+                    <div class="workshop-card">
+                        <h3>Cybersecurity Basics</h3>
+                        <p><i class="fas fa-calendar"></i> Next Session: Dec 15, 2024</p>
+                        <p><i class="fas fa-clock"></i> Duration: 2 hours</p>
+                        <p><i class="fas fa-users"></i> Available Spots: 25</p>
+                        <button class="btn btn-primary" onclick="registerWorkshop('cybersecurity')">Register Now</button>
+                    </div>
+                    
+                    <div class="workshop-card">
+                        <h3>Web Development Fundamentals</h3>
+                        <p><i class="fas fa-calendar"></i> Next Session: Dec 20, 2024</p>
+                        <p><i class="fas fa-clock"></i> Duration: 3 hours</p>
+                        <p><i class="fas fa-users"></i> Available Spots: 30</p>
+                        <button class="btn btn-primary" onclick="registerWorkshop('webdev')">Register Now</button>
+                    </div>
+                    
+                    <div class="workshop-card">
+                        <h3>Digital Safety for Students</h3>
+                        <p><i class="fas fa-calendar"></i> Next Session: Dec 25, 2024</p>
+                        <p><i class="fas fa-clock"></i> Duration: 1.5 hours</p>
+                        <p><i class="fas fa-users"></i> Available Spots: 40</p>
+                        <button class="btn btn-primary" onclick="registerWorkshop('safety')">Register Now</button>
+                    </div>
+                </div>
+                
+                <div class="registration-form" id="registrationForm" style="display: none;">
+                    <h3>Workshop Registration</h3>
+                    <form onsubmit="submitRegistration(event)">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <select required>
+                            <option value="">Select Institution</option>
+                            <option value="school">School</option>
+                            <option value="college">College</option>
+                            <option value="university">University</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <button type="submit" class="btn btn-primary">Complete Registration</button>
+                        <button type="button" class="btn btn-secondary" onclick="closeForm()">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function registerWorkshop(type) {
+            document.getElementById('registrationForm').style.display = 'block';
+            document.getElementById('registrationForm').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function closeForm() {
+            document.getElementById('registrationForm').style.display = 'none';
+        }
+
+        function submitRegistration(event) {
+            event.preventDefault();
+            alert('Registration submitted successfully! You will receive a confirmation email shortly.');
+            closeForm();
+        }
+    </script>
+</body>
+</html>

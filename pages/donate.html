@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Now - TechSkill NGO</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="main-content">
+        <header class="top-header">
+            <div style="display: flex;">
+                <a href="../index.html" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </a>
+                <div id="branding">
+                    <h1><i><span class="highlighted">TechSkill&nbsp;</span>NGO</i></h1>
+                </div>
+            </div>
+        </header>
+
+        <section class="donate-section">
+            <div class="container">
+                <h1><i class="fas fa-heart"></i> Support Our Mission</h1>
+                <p>Help us empower more students with technical education and cybersecurity awareness.</p>
+                
+                <div class="donation-options">
+                    <div class="donation-amounts">
+                        <h3>Choose Donation Amount</h3>
+                        <div class="amount-buttons">
+                            <button class="amount-btn" onclick="selectAmount(500)">₹500</button>
+                            <button class="amount-btn" onclick="selectAmount(1000)">₹1,000</button>
+                            <button class="amount-btn" onclick="selectAmount(2500)">₹2,500</button>
+                            <button class="amount-btn" onclick="selectAmount(5000)">₹5,000</button>
+                        </div>
+                        <input type="number" id="customAmount" placeholder="Enter custom amount" min="100">
+                    </div>
+                    
+                    <div class="donation-impact">
+                        <h3>Your Impact</h3>
+                        <div class="impact-item">
+                            <span>₹500</span> - Provides cybersecurity training materials for 5 students
+                        </div>
+                        <div class="impact-item">
+                            <span>₹1,000</span> - Sponsors a complete workshop for 10 students
+                        </div>
+                        <div class="impact-item">
+                            <span>₹2,500</span> - Funds digital safety tools and resources
+                        </div>
+                        <div class="impact-item">
+                            <span>₹5,000</span> - Supports a full technical skills program
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="donation-form">
+                    <h3>Donor Information</h3>
+                    <form onsubmit="processDonation(event)">
+                        <input type="text" placeholder="Full Name" required>
+                        <input type="email" placeholder="Email Address" required>
+                        <input type="tel" placeholder="Phone Number" required>
+                        <textarea placeholder="Message (Optional)" rows="3"></textarea>
+                        <div class="donation-total">
+                            <strong>Donation Amount: ₹<span id="totalAmount">0</span></strong>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-large">Proceed to Payment</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        let selectedAmount = 0;
+
+        function selectAmount(amount) {
+            selectedAmount = amount;
+            document.getElementById('customAmount').value = '';
+            document.getElementById('totalAmount').textContent = amount;
+            
+            // Update button styles
+            document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+
+        document.getElementById('customAmount').addEventListener('input', function() {
+            selectedAmount = parseInt(this.value) || 0;
+            document.getElementById('totalAmount').textContent = selectedAmount;
+            document.querySelectorAll('.amount-btn').forEach(btn => btn.classList.remove('selected'));
+        });
+
+        function processDonation(event) {
+            event.preventDefault();
+            if (selectedAmount < 100) {
+                alert('Minimum donation amount is ₹100');
+                return;
+            }
+            alert(`Thank you for your generous donation of ₹${selectedAmount}! You will be redirected to the payment gateway.`);
+        }
+    </script>
+</body>
+</html>
